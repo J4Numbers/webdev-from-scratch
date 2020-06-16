@@ -10,6 +10,11 @@ const server = restify.createServer({
   url: config.get('app.hostname'),
   version: package.version,
   ignoreTrailingSlash: true,
+  formatters: {
+    'text/html': (req, res, body) => {
+      return body;
+    },
+  },
 });
 
 routingEngine(server);
