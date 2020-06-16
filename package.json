@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/J4Numbers/webdev-from-scratch/issues"
   },
-  "homepage": "https://github.com/J4Numbers/webdev-from-scratch#readme"
+  "homepage": "https://github.com/J4Numbers/webdev-from-scratch#readme",
+  "dependencies": {
+    "config": "^3.3.1",
+    "restify": "^8.5.1"
+  }
 }
