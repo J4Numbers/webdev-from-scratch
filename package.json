@@ -1,0 +1,24 @@
+{
+  "name": "webdev-from-scratch",
+  "version": "0.0.1",
+  "description": "Website for advertising the webdev from scratch series of videos and blogs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/J4Numbers/webdev-from-scratch.git"
+  },
+  "keywords": [
+    "website",
+    "educational",
+    "webdev"
+  ],
+  "author": "Jayne Doe <j4numbers@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/J4Numbers/webdev-from-scratch/issues"
+  },
+  "homepage": "https://github.com/J4Numbers/webdev-from-scratch#readme"
+}
