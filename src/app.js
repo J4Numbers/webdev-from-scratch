@@ -3,6 +3,8 @@ const restify = require('restify');
 
 const package = require('../package');
 
+const routingEngine = require('./middleware/routes');
+
 const server = restify.createServer({
   name: config.get('app.name'),
   url: config.get('app.hostname'),
@@ -10,12 +12,7 @@ const server = restify.createServer({
   ignoreTrailingSlash: true,
 });
 
-server.get('/', (req, res, next) => {
-  console.log(`${req.getPath()} was called`);
-  res.contentType = 'text/plain';
-  res.send(200, 'Hello world');
-  next();
-});
+routingEngine(server);
 
 server.listen(config.get('app.port'), () => {
   console.log(`${server.name} has started at location ${server.url}`);
