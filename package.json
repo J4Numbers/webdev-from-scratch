@@ -6,7 +6,8 @@
   "scripts": {
     "quality:lint": "eslint .",
     "start": "node src/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run test:js",
+    "test:js": "nyc --all mocha --config test/.mocharc.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,11 @@
     "restify": "^8.5.1"
   },
   "devDependencies": {
-    "eslint": "^7.2.0"
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "chai-http": "^4.3.0",
+    "eslint": "^7.2.0",
+    "mocha": "^8.0.1",
+    "nyc": "^15.1.0"
   }
 }

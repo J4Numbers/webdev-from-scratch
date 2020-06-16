@@ -20,3 +20,5 @@ server.get('/', (req, res, next) => {
 server.listen(config.get('app.port'), () => {
   console.log(`${server.name} has started at location ${server.url}`);
 });
+
+module.exports = server;
