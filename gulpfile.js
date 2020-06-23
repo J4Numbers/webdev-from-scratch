@@ -9,7 +9,7 @@ const babelDir = './src/javascript/**/*.js';
 const fontDir = './src/fonts/**/*.{woff,woff2}';
 const imageDir = './src/images/**/*.{png,ico,gif,jpg,svg,xml}';
 const sassDir = './src/stylesheets/**/*.scss';
-const bootstrapJsFiles = './node_modules/bootstrap/js/dist/**/*.js';
+const bootstrapJsFiles = './node_modules/bootstrap/dist/js/**/*.js';
 
 const destDir = './public/';
 const destBabelDir = `${destDir}javascript`;
@@ -50,7 +50,10 @@ gulp.task('copy-images', () => gulp
   .pipe(gulp.dest(destImageDir)));
 
 gulp.task('copy-scripts', () => gulp
-  .src([bootstrapJsFiles])
+  .src([
+    bootstrapJsFiles,
+    './node_modules/jquery/dist/**/*.js',
+  ])
   .pipe(gulp.dest(destBabelDir)));
 
 /* ---------------------------------------------------------- BUILD TASKS */

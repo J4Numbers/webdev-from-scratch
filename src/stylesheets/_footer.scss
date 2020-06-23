@@ -1,0 +1,15 @@
+.footer {
+  background-color: #343a40;
+  color: $light;
+}
+
+.footer a {
+  color: $light;
+  text-decoration: none;
+  border-bottom: 1px $white dotted;
+
+  &:hover {
+    color: $secondary;
+    border-bottom: 1px $white solid;
+  }
+}
