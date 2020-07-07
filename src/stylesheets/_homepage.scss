@@ -1,0 +1,24 @@
+.introduction-box {
+  margin-bottom: 20px;
+
+  .introduction-icon {
+    position: relative;
+    z-index: 5;
+
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    background-color: #ab7676;
+    color: #ffe6e6;
+  }
+
+  .introduction-text {
+    background-color: #ff8484;
+    border-radius: 15px;
+    margin-top: -40px;
+    padding: 10px;
+    padding-top: 50px;
+    font-size: large;
+  }
+}

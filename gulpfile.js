@@ -10,6 +10,8 @@ const fontDir = './src/fonts/**/*.{woff,woff2}';
 const imageDir = './src/images/**/*.{png,ico,gif,jpg,svg,xml}';
 const sassDir = './src/stylesheets/**/*.scss';
 const bootstrapJsFiles = './node_modules/bootstrap/dist/js/**/*.js';
+const fontawesomeJsFiles = './node_modules/@fortawesome/fontawesome-free/js/**/*.js';
+const jqueryJsFiles = './node_modules/jquery/dist/**/*.js';
 
 const destDir = './public/';
 const destBabelDir = `${destDir}javascript`;
@@ -49,12 +51,29 @@ gulp.task('copy-images', () => gulp
   .src([imageDir])
   .pipe(gulp.dest(destImageDir)));
 
-gulp.task('copy-scripts', () => gulp
+gulp.task('copy-bootstrap', () => gulp
   .src([
     bootstrapJsFiles,
-    './node_modules/jquery/dist/**/*.js',
   ])
-  .pipe(gulp.dest(destBabelDir)));
+  .pipe(gulp.dest(destBabelDir + '/bootstrap')));
+
+gulp.task('copy-fontawesome', () => gulp
+  .src([
+    fontawesomeJsFiles,
+  ])
+  .pipe(gulp.dest(destBabelDir + '/fontawesome')));
+
+gulp.task('copy-jquery', () => gulp
+  .src([
+    jqueryJsFiles,
+  ])
+  .pipe(gulp.dest(destBabelDir + '/jquery')));
+
+gulp.task('copy-scripts', gulp.parallel(
+  'copy-bootstrap',
+  'copy-jquery',
+  'copy-fontawesome',
+));
 
 /* ---------------------------------------------------------- BUILD TASKS */
 
