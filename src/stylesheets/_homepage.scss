@@ -22,3 +22,134 @@
     font-size: large;
   }
 }
+
+
+.content-scroll {
+  margin-bottom: 20px;
+
+  .content-icon {
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    background-color: #76ab76;
+    color: #e6ffe6;
+  }
+
+  .content-heading-box {
+    width: max-content;
+  }
+
+  .content-heading {
+    padding: 0 30px;
+    border-bottom: 2px black solid;
+    text-align: center;
+  }
+
+  .content-item {
+    border-radius: 30px;
+    background-color: #f0f0f0;
+  }
+
+  .content-item-icon {
+    margin: 0 auto;
+    width: max-content;
+    height: max-content;
+    color: #aeecae;
+    padding: 20px 0;
+  }
+
+  .content-item-title {
+    text-align: center;
+    background-color: #d0d0d0;
+    padding: 10px 0;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+    a {
+      color: #212529;
+    }
+
+    a:hover {
+      color: #515559;
+    }
+  }
+}
+
+.meet-the-staff-box {
+  margin-bottom: 20px;
+
+  .meet-the-staff-icon {
+    position: relative;
+    z-index: 5;
+
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    background-color: #7676ab;
+    color: #e6e6ff;
+  }
+
+  .meet-the-staff-heading {
+    text-align: center;
+  }
+
+  .available-staff {
+    background-color: #8484ff;
+    border-radius: 15px;
+    margin-top: -85px;
+    padding: 10px;
+    padding-top: 100px;
+    font-size: large;
+  }
+
+  .staff-profile {
+    border-radius: 30px;
+    background-color: e6e6ff;
+
+    .staff-profile-image {
+      padding: 10px 0;
+
+      .staff-profile-icon {
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+        margin: 0 auto;
+        padding: 5px;
+        background-color: white;
+      }
+
+      .staff-profile-inner-icon {
+        display: flex;
+        flex-wrap: wrap;
+
+        height: 90px;
+        width: 90px;
+        border-radius: 45px;
+        background-color: #c1c1c1;
+        color: #7676ab;
+
+        .clip-icon {
+          clip-path: circle(45px at center);
+        }
+      }
+    }
+
+    .staff-profile-name {
+      text-align: center;
+      background-color: #7676ab;
+      padding: 10px 0;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+
+      a {
+        color: #fbfcff;
+      }
+
+      a:hover {
+        color: #cbcccf;
+      }
+    }
+  }
+}
